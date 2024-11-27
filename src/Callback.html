@@ -1,0 +1,102 @@
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>The result of the calculation is:</p>
+<p id="demo"></p>
+
+<script>
+function myDis(something) {
+  document.getElementById("demo").innerHTML = something;
+}
+
+function myDis(some ){
+  document.getElementById("demo").innerHTML = some;
+}
+
+
+
+
+function myCalculator(num1, num2, myCallback) {
+  let sum = num1 + num2;
+  myCallback(sum);
+}
+
+myCalculator(5, 5, myDis);
+</script>
+
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body style="text-align: right">
+
+<h1>JavaScript Functions</h1>
+<h2>Callback Functions</h2>
+<p id="demo"></p>
+
+<script>
+// Create an Array
+const myNumbers = [4, 1, -20, -7, 5, 9, -6];
+
+// Call removeNeg with a Callback
+const posNumbers = removeNeg(myNumbers, (x) => x >= 0);
+
+// Display Result
+document.getElementById("demo").innerHTML = posNumbers;
+
+// Remove negative numbers
+function removeNeg(numbers, callback) {
+  const myArray = [];
+  for (const x of numbers) {
+    if (callback(x)) {
+      myArray.push(x);
+    }
+  }
+  return myArray;
+}
+</script>
+
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Promise Object</h1>
+<h2>The then() Method</h2>
+
+<p id="demo"></p>
+
+<script>
+function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = some;
+}
+
+let myPromise = new Promise(function(myResolve, myReject) {
+  let x = 0;
+
+// some code (try to change x to 5)
+
+  if (x == 0) {
+    myResolve("OK");
+  } else {
+    myReject("Error");
+  }
+});
+
+myPromise.then(
+  function(value) {myDisplayer(value);},
+  function(error) {myDisplayer(error);}
+);
+</script>
+
+</body>
+</html>
